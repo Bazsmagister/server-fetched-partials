@@ -1,5 +1,6 @@
 <?php
 
+use App\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    $users = App\User::inRandomOrder()->limit(5)->get();
+    return view('sponsorships', ['users' => $users]);
 });
