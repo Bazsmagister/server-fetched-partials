@@ -33,8 +33,10 @@
 
     fetchDevelopers()
 
+    fetch
 
     </script>
+
 </body>
 
 </html>

@@ -27,3 +27,5 @@ php artisan make:seeder UserSeeder
 into the run method :
 
 factory(App\User::class, 10)->create();
+
+In web developer console check XHR , and Response payload. It is html.
