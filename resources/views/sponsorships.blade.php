@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <button type="submit">Refresh</button>
-    <ul>
+    <button onclick="fetchDevelopers()">Refresh</button>
+    <ul id="js-developers-partial-target">
         {{-- @foreach ($users as $user)
         <li>
             {{$user}}
@@ -20,6 +20,21 @@
         @endforeach --}}
     </ul>
 
+
+    <script>
+        function fetchDevelopers(){
+        fetch('/partials/developers')
+            .then(response => response.text())
+            .then(html => {
+                document.querySelector('#js-developers-partial-target').innerHTML =html
+
+            })
+    }
+
+    fetchDevelopers()
+
+
+    </script>
 </body>
 
 </html>
