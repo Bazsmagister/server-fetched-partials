@@ -29,11 +29,31 @@
                 document.querySelector('#js-developers-partial-target').innerHTML =html
 
             })
-    }
+        }
+
+
 
     fetchDevelopers()
 
-    fetch
+            // # Fetch API
+            // fetch(url)
+            // .then((resp) => resp.json()) // Transform the data into json
+            // .then(function(data) {
+            // // Create and append the li's to the ul
+            // })
+
+                // OR
+
+                // let fetchData = {
+                // method: 'POST',
+                // body: data,
+                // headers: new Headers()
+                // }
+
+                // fetch(url, fetchData)
+                // .then((resp) => resp.json())
+                // .then(function(data) { })
+
 
     </script>
 
