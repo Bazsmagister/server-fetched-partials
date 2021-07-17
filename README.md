@@ -1,3 +1,24 @@
+example:
+git clone https://github.com/Bazsmagister/server-fetched-partials.git
+
+cd [into_the_cloned_repo]
+
+composer install
+
+//linux
+cp .env.example .env
+
+//windows
+copy .env.example .env
+
+edit .env file with database credentials
+
+php artisan key:generate
+
+php artisan migrate
+
+php artisan serve
+
 my source:
 
 https://laracasts.com/series/javascript-techniques-for-server-side-developers/episodes/1
@@ -16,7 +37,7 @@ return view('sponsorships');
 //
 Route::get('/partials/developers', function () {
 $users = App\User::inRandomOrder()->limit(5)->get();
-    return view('_developers', ['users' => $users]);
+return view('\_developers', ['users' => $users]);
 });
 //
 
